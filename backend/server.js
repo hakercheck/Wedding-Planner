@@ -12,6 +12,7 @@ import itemRoutes from './routes/itemRoutes.js';
 import vendorDisplayRoutes from './routes/vendorDisplayRoutes.js';
 import vendorSelectRoutes from './routes/vendorSelectRoutes.js';
 import OrderRoutes from './routes/OrderRoutes.js';
+import cors from 'cors';
 
 const port = process.env.PORT || 5000;
 
@@ -21,6 +22,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.use(cookieParser());
 
